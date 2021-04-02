@@ -1,0 +1,175 @@
+prompt --application/pages/page_00005
+begin
+--   Manifest
+--     PAGE: 00005
+--   Manifest End
+wwv_flow_api.component_begin (
+ p_version_yyyy_mm_dd=>'2020.10.01'
+,p_release=>'20.2.0.00.20'
+,p_default_workspace_id=>20758126333076902741
+,p_default_application_id=>122294
+,p_default_id_offset=>0
+,p_default_owner=>'BV_DEV'
+);
+wwv_flow_api.create_page(
+ p_id=>5
+,p_user_interface_id=>wwv_flow_api.id(43163674977108272817)
+,p_name=>'InteractiveReports'
+,p_alias=>'INTERACTIVEREPORTS'
+,p_step_title=>'InteractiveReports'
+,p_autocomplete_on_off=>'OFF'
+,p_page_template_options=>'#DEFAULT#'
+,p_last_updated_by=>'BENNY.VAESSEN@GMAIL.COM'
+,p_last_upd_yyyymmddhh24miss=>'20210320081945'
+);
+wwv_flow_api.create_page_plug(
+ p_id=>wwv_flow_api.id(31323015218042938544)
+,p_plug_name=>'Employees'
+,p_region_template_options=>'#DEFAULT#'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>wwv_flow_api.id(43163487558171272738)
+,p_plug_display_sequence=>10
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_display_point=>'BODY'
+,p_query_type=>'SQL'
+,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select *',
+'  from emp;'))
+,p_plug_source_type=>'NATIVE_IR'
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+,p_prn_content_disposition=>'ATTACHMENT'
+,p_prn_document_header=>'APEX'
+,p_prn_units=>'INCHES'
+,p_prn_paper_size=>'LETTER'
+,p_prn_width=>11
+,p_prn_height=>8.5
+,p_prn_orientation=>'HORIZONTAL'
+,p_prn_page_header=>'Employees'
+,p_prn_page_header_font_color=>'#000000'
+,p_prn_page_header_font_family=>'Helvetica'
+,p_prn_page_header_font_weight=>'normal'
+,p_prn_page_header_font_size=>'12'
+,p_prn_page_footer_font_color=>'#000000'
+,p_prn_page_footer_font_family=>'Helvetica'
+,p_prn_page_footer_font_weight=>'normal'
+,p_prn_page_footer_font_size=>'12'
+,p_prn_header_bg_color=>'#EEEEEE'
+,p_prn_header_font_color=>'#000000'
+,p_prn_header_font_family=>'Helvetica'
+,p_prn_header_font_weight=>'bold'
+,p_prn_header_font_size=>'10'
+,p_prn_body_bg_color=>'#FFFFFF'
+,p_prn_body_font_color=>'#000000'
+,p_prn_body_font_family=>'Helvetica'
+,p_prn_body_font_weight=>'normal'
+,p_prn_body_font_size=>'10'
+,p_prn_border_width=>.5
+,p_prn_page_header_alignment=>'CENTER'
+,p_prn_page_footer_alignment=>'CENTER'
+,p_prn_border_color=>'#666666'
+);
+wwv_flow_api.create_worksheet(
+ p_id=>wwv_flow_api.id(31323015319151938545)
+,p_max_row_count=>'1000000'
+,p_pagination_type=>'ROWS_X_TO_Y'
+,p_pagination_display_pos=>'BOTTOM_RIGHT'
+,p_report_list_mode=>'TABS'
+,p_show_notify=>'Y'
+,p_download_formats=>'CSV:HTML:XLSX:PDF:RTF:EMAIL'
+,p_detail_link_text=>'<img src="#IMAGE_PREFIX#app_ui/img/icons/apex-edit-pencil.png" class="apex-edit-pencil" alt="">'
+,p_allow_exclude_null_values=>'N'
+,p_allow_hide_extra_columns=>'N'
+,p_owner=>'BENNY.VAESSEN@GMAIL.COM'
+,p_internal_uid=>31323015319151938545
+);
+wwv_flow_api.create_worksheet_column(
+ p_id=>wwv_flow_api.id(31323015425888938546)
+,p_db_column_name=>'EMPNO'
+,p_display_order=>10
+,p_column_identifier=>'A'
+,p_column_label=>'Empno'
+,p_column_type=>'NUMBER'
+,p_column_alignment=>'RIGHT'
+);
+wwv_flow_api.create_worksheet_column(
+ p_id=>wwv_flow_api.id(31323015562584938547)
+,p_db_column_name=>'ENAME'
+,p_display_order=>20
+,p_column_identifier=>'B'
+,p_column_label=>'Ename'
+,p_column_type=>'STRING'
+);
+wwv_flow_api.create_worksheet_column(
+ p_id=>wwv_flow_api.id(31323015631755938548)
+,p_db_column_name=>'JOB'
+,p_display_order=>30
+,p_column_identifier=>'C'
+,p_column_label=>'Job'
+,p_column_type=>'STRING'
+);
+wwv_flow_api.create_worksheet_column(
+ p_id=>wwv_flow_api.id(31323015738343938549)
+,p_db_column_name=>'MGR'
+,p_display_order=>40
+,p_column_identifier=>'D'
+,p_column_label=>'Mgr'
+,p_column_type=>'NUMBER'
+,p_column_alignment=>'RIGHT'
+);
+wwv_flow_api.create_worksheet_column(
+ p_id=>wwv_flow_api.id(31323015801047938550)
+,p_db_column_name=>'HIREDATE'
+,p_display_order=>50
+,p_column_identifier=>'E'
+,p_column_label=>'Hiredate'
+,p_column_type=>'DATE'
+,p_column_alignment=>'CENTER'
+,p_tz_dependent=>'N'
+);
+wwv_flow_api.create_worksheet_column(
+ p_id=>wwv_flow_api.id(43880451887918474701)
+,p_db_column_name=>'SAL'
+,p_display_order=>60
+,p_column_identifier=>'F'
+,p_column_label=>'Sal'
+,p_column_type=>'NUMBER'
+,p_column_alignment=>'RIGHT'
+);
+wwv_flow_api.create_worksheet_column(
+ p_id=>wwv_flow_api.id(43880451966622474702)
+,p_db_column_name=>'COMM'
+,p_display_order=>70
+,p_column_identifier=>'G'
+,p_column_label=>'Comm'
+,p_column_type=>'NUMBER'
+,p_column_alignment=>'RIGHT'
+);
+wwv_flow_api.create_worksheet_column(
+ p_id=>wwv_flow_api.id(43880452037856474703)
+,p_db_column_name=>'DEPTNO'
+,p_display_order=>80
+,p_column_identifier=>'H'
+,p_column_label=>'Deptno'
+,p_column_type=>'NUMBER'
+,p_column_alignment=>'RIGHT'
+);
+wwv_flow_api.create_worksheet_column(
+ p_id=>wwv_flow_api.id(43880452175806474704)
+,p_db_column_name=>'OFFSITE'
+,p_display_order=>90
+,p_column_identifier=>'I'
+,p_column_label=>'Offsite'
+,p_column_type=>'STRING'
+);
+wwv_flow_api.create_worksheet_rpt(
+ p_id=>wwv_flow_api.id(43880591231502477547)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'438805913'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_report_columns=>'EMPNO:ENAME:JOB:MGR:HIREDATE:SAL:COMM:DEPTNO:OFFSITE'
+);
+wwv_flow_api.component_end;
+end;
+/
