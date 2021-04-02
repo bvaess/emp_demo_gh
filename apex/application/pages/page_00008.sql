@@ -21,7 +21,7 @@ wwv_flow_api.create_page(
 ,p_autocomplete_on_off=>'OFF'
 ,p_page_template_options=>'#DEFAULT#'
 ,p_last_updated_by=>'BENNY.VAESSEN@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20210327162449'
+,p_last_upd_yyyymmddhh24miss=>'20210402142642'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(43880452806623474711)
@@ -567,6 +567,19 @@ wwv_flow_api.create_page_item(
 ,p_field_template=>wwv_flow_api.id(43163650780039272794)
 ,p_item_template_options=>'#DEFAULT#'
 ,p_attribute_01=>'APPLICATION'
+);
+wwv_flow_api.create_page_process(
+ p_id=>wwv_flow_api.id(46681119190487137641)
+,p_process_sequence=>10
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'SampleProcess'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'begin',
+'  null;',
+'end;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 );
 wwv_flow_api.component_end;
 end;
