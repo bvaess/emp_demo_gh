@@ -168,6 +168,14 @@ wwv_flow_api.create_list_item(
 ,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
 ,p_list_item_current_for_pages=>'16'
 );
+wwv_flow_api.create_list_item(
+ p_id=>wwv_flow_api.id(47300487158836180752)
+,p_list_item_display_sequence=>190
+,p_list_item_link_text=>'Employee Data Entry'
+,p_list_item_link_target=>'f?p=&APP_ID.:17:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'17'
+);
 wwv_flow_api.component_end;
 end;
 /
